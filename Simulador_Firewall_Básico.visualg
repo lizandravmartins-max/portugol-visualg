@@ -1,0 +1,29 @@
+algoritmo "Simulador_Firewall_Básico"
+
+var
+  ip_origem: caractere
+  porta_destino: inteiro
+
+inicio
+  escreval ("=== SIMULADOR DE FIREWALL ===")
+  escreval ("Digite seu IP (ex.: 192.168.1.10): ")
+  leia(ip_origem)
+  escreva ("Digite o número da porta de destino: ")
+  leia (porta_destino)
+  escreval ("------------------------------")
+  se (porta_destino = 80) entao
+      escreval("Acesso WEB (HTTP) PERMITIDO para o IP ", ip_origem)
+   senao
+      se (porta_destino = 443) entao
+         escreval("Acesso WEB SEGURO (HTTPS) PERMITIDO para o IP ", ip_origem)
+      senao
+         se (porta_destino = 22) entao
+            escreval("Acesso de Acesso Remoto (SSH) BLOQUEADO por motivos de segurança!")
+         senao
+            escreval("Porta ", porta_destino, " não configurada. Tráfego Bloqueado.")
+         fimse
+      fimse
+   fimse
+
+
+fimalgoritmo
