@@ -1,0 +1,11 @@
+algoritmo "Primeiro Programa"
+
+var
+
+
+inicio
+
+  escreva ("Olá, Mundo!")
+  
+
+fimalgoritmo
